@@ -1,0 +1,48 @@
+jenkins Install (Jenkins server)
+
+    1  sudo amazon-linux-extras install java-openjdk11 -y (must be)
+    2  java -version
+    3  sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    4  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+    5  sudo yum update
+    6  sudo yum install jenkins -y
+    7  sudo systemctl enable jenkins
+    8  sudo systemctl start jenkins
+    9  sudo systemctl status jenkins
+   10  cat /var/lib/jenkins/secrets/initialAdminPassword <<<<<<<<<< password here >>>>>>>>>>
+
+mvn installing in server
+1.	yum install git -y
+2.	git - -version
+3.	git clone < git code >
+4.	wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo   (java-17-openjdk automatically installed)
+    5.  sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+    6. sudo yum install -y apache-maven
+    7.  mvn - -version
+    8.  java -version
+    9.  update-alternatives --config java  <<<<<<< select java-11 version for jenkins buliding>>>>>>>>>>
+Build success.
+
+Tomcat install (tomcat server)
+1.	sudo su
+2.	yum install -y  java-1.8.0-openjdk-devel.x86_64
+3.	wget < Install tomcat-9>
+4.	tar -xvf apache-tomcat-xxx.tar.gz
+5.	useradd tomcat
+6.	passwd tomcat
+7.	chown -R tomcat:tomcat /apache-tomcat-xxx
+8.	cd  apache-tomcat-xxx/webapps/manager/META-INF
+9.	ls
+10.	vi context.xml
+11.	we need to edit 2 lines for permission
+12.	cd  apache-tomcat-xxx/conf
+13.	ls
+14.	tomcat-user.xml (we need  to add users and passwd for project security)
+15.	cd  apache-tomcat-xxx/bin
+16.	./shutdown.sh
+17.	./startup.sh
+
+
+
+
