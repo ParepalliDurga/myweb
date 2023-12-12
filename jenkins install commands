@@ -43,6 +43,18 @@ Tomcat install (tomcat server)
 16.	./shutdown.sh
 17.	./startup.sh
 
+Sonarqube Installation
+
+1.	sudo amazon-linux-extras install java-openjdk11 -y
+2.	sudo wget -O /etc/yum.repos.d/sonar.repo http://downloads.sourceforge.net/project/sonar-pkg/rpm/sonar.repo
+3.	sudo yum install sonar -y
+4.	sudo service sonar start
+
+
+
+
+
+
 
 
 
