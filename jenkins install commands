@@ -17,11 +17,11 @@ mvn installing in server
 2.	git - -version
 3.	git clone < git code >
 4.	wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo   (java-17-openjdk automatically installed)
-    5.  sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
-    6. sudo yum install -y apache-maven
-    7.  mvn - -version
-    8.  java -version
-    9.  update-alternatives --config java  <<<<<<< select java-11 version for jenkins buliding>>>>>>>>>>
+5.  sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+6. sudo yum install -y apache-maven
+7.  mvn - -version
+8.  java -version
+9.  update-alternatives --config java  <<<<<<< select java-11 version for jenkins buliding>>>>>>>>>>
 Build success.
 
 Tomcat install (tomcat server)
